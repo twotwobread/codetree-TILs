@@ -12,8 +12,9 @@ public class Main {
 
         int r = n;
         while(m % r != 0){
+            int temp = r;
             r = m % n;
-            m = n;
+            m = temp;
         }
         bw.write(r + "\n");
         bw.flush();
