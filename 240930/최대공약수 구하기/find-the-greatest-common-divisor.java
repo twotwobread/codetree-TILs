@@ -8,6 +8,11 @@ public class Main {
         int n = sc.nextInt();
         int m = sc.nextInt();
 
+        if(n > m){
+            int temp = m;
+            m = n;
+            n = temp;
+        }
         int r = n;
         while(m % r != 0){
             int temp = r;
