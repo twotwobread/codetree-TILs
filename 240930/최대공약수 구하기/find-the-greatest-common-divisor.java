@@ -16,13 +16,12 @@ public class Main {
         int r = n;
         while(m % r != 0){
             int temp = r;
-            r = m % n;
+            r = m % r;
             m = temp;
         }
         System.out.print(r);
 
         //18 % 12 = 6
         //12 % 6 = 0
-
     }
 }
