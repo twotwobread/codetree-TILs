@@ -14,10 +14,7 @@ public class Main {
         System.out.println(cnt);
     }
     static boolean isMagicNumber(int a){
-        if(a % 3 == 0){
-            return true;
-        }
-        if(isThreeSixNine(a)){
+        if(a % 3 == 0 || isThreeSixNine(a)){
             return true;
         }
         return false;
@@ -27,7 +24,7 @@ public class Main {
         while(a > 0){
             n = a % 10;
             a /= 10;
-            if(n % 3 == 0){
+            if(n != 0 && n % 3 == 0){
                 return true;
             }
         }
