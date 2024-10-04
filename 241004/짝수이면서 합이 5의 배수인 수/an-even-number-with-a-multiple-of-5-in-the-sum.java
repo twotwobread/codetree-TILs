@@ -5,8 +5,9 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println(isMagicNumber(sc.nextInt())?"Yes":"No");
     }
-    static boolean isMagicNumber(int a){
+    static boolean isMagicNumber(int n){
         int sum = 0;
+        int a = n;
         while(a > 0){
             sum += a % 10;
             a /= 10;
