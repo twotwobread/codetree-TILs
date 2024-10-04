@@ -12,7 +12,7 @@ public class Main {
             sum += a % 10;
             a /= 10;
         }
-        if(a % 2 == 0 && sum % 5 == 0)
+        if(n % 2 == 0 && sum % 5 == 0)
             return true;
         return false;
     }
