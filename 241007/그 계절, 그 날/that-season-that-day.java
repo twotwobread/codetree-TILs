@@ -25,15 +25,14 @@ public class Main {
             if(isLeapYear(y))   return 29;
             else                return 28;
         }
-        if(m <= 7 && m % 2 == 1 || m < 7 && m % 2 == 0)
-            return 31;
-        return 30;
+        if(m == 4 || m == 6 || m == 9 || m == 11)
+            return 30;
+        return 31;
 
     }
     static boolean isLeapYear(int y){
         if(y % 400 == 0) return true;
         if(y % 100 == 0) return false;
-        if(y % 4 == 0) return true;
-        return false;
+        return y % 4 == 0;
     }
 }
