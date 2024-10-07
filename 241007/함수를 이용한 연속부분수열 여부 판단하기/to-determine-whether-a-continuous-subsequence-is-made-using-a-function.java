@@ -17,7 +17,7 @@ public class Main {
 
         for(int i = 0; i <= n1 - n2; i++){
             if(arr1[i] == arr2[0]){
-                for(int j = 0; j < n2; i++){
+                for(int j = 0; j < n2; j++){
                     if(arr1[i + j] != arr2[j])
                         break;
                 }
