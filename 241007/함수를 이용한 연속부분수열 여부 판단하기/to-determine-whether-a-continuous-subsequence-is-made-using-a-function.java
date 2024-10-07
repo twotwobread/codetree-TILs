@@ -17,16 +17,23 @@ public class Main {
 
         for(int i = 0; i <= n1 - n2; i++){
             if(arr1[i] == arr2[0]){
-                for(int j = 0; j < n2; j++){
-                    if(arr1[i + j] != arr2[j])
-                        break;
+                if(isSubString(arr1, arr2, i, 0 )){
+                    System.out.println("Yes");
+                    return;
                 }
-                System.out.println("Yes");
-                return;
             }
         }
 
         System.out.println("No");
-        
+
+    }
+    static boolean isSubString(int[] arr1, int[] arr2, int idx1, int idx2){
+        if(arr1.length - idx1 < idx2)
+            return false;
+        for(int i = 0; i < arr2.length; i++){
+            if(arr1[idx1 + i] != arr2[i])
+                return false;
+        }
+        return true;
     }
 }
