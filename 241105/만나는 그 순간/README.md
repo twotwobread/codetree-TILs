@@ -36,3 +36,7 @@
 [easy]: https://img.shields.io/badge/쉬움-%235cb85c.svg?for-the-badge
 [medium]: https://img.shields.io/badge/보통-%23FFC433.svg?for-the-badge
 [hard]: https://img.shields.io/badge/어려움-%23D24D57.svg?for-the-badge
+
+# 시간복잡도 개선
+![alt text](image.png)  
+- append를 들어내니까 시간 복잡도 약 10배 상승 -> 애초에 케이스가 최대 케이스가 없어서 통과됨 아니면 통과 못했을꺼임.
