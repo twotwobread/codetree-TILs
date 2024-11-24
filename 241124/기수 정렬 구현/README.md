@@ -36,3 +36,8 @@
 [easy]: https://img.shields.io/badge/쉬움-%235cb85c.svg?for-the-badge
 [medium]: https://img.shields.io/badge/보통-%23FFC433.svg?for-the-badge
 [hard]: https://img.shields.io/badge/어려움-%23D24D57.svg?for-the-badge
+
+# 코드 관련
+- 처음에는 코멘트한 코드를 이용했음 -> append 때문에 시간적 효율성과 2개의 10N의 배열을 사용하니까 공간적 효율성도 떨어질 것이라 판단.  
+- 그래서 counting sort를 이용하여 append를 없애고 N의 배열을 이용. -> 근데 시간적인 효율성이 나아지지 않았음. -> 그 이유는 append의 최적화 (한번 메모리 공간할당 시 2배씩 할당해서 자주 발생하지 않음.)라 판단했음.  
+- 그러면 최대한 효율적으로 변경하기 위해서 메모리 할당을 최소화하고 copy하는 비용을 없애려고 함. -> 배열을 재사용하고 copy 대신 포인터를 변경해서 한 10ms 정도 줄였음.
