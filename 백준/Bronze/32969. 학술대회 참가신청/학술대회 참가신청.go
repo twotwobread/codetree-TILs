@@ -13,13 +13,9 @@ type Track struct {
 }
 
 func (t Track) Contains(subject string) bool {
-  parts := strings.Fields(subject)
-  
-  for _, p := range parts {
-    for _, s := range t.Subjects {
-      if p == s {
-        return true
-      }
+  for _, s := range t.Subjects {
+    if strings.Contains(subject, s) {
+      return true
     }
   }
   
